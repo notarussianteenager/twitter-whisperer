@@ -21,7 +21,7 @@ Follow these steps, midwit Western noob:
 6. Switch to the "Network" tab
 7. Cmd + R or Ctrl + R
 8. Type "UserTweets" into the "Filter" box
-9. Scroll down until a 2nd UserTweets request shows up
+9. Scroll down on their feed until a 2nd UserTweets request shows up
 10. Right-click on the 2nd one
 11. Copy -> Copy as cURL
 12. cd to twitter-whisperer

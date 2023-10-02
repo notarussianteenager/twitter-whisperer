@@ -34,3 +34,9 @@ while [ $counter -lt $1 ]; do
     # Increment the counter
     ((counter++))
 done
+
+# After the loop completes, concatenate all files in the tweet/ directory, remove quotes, and parse as a JSON array
+rm tweet/tweets.json
+cat tweet/*.json > tweets.json
+jq -R -s -c 'gsub("\""; "") | split("\n")[:-1]' tweets.json > tweet/tweets.json
+rm tweets.json

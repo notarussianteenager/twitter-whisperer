@@ -18,7 +18,8 @@ then
 fi
 
 # URL encode the TWEET_ID
-TWEET_ID=$(echo -n "$1" | curl -Gso /dev/null -w %{url_effective} --data-urlencode @- "" | cut -c 3-)
+# URL encode the TWEET_ID
+TWEET_ID=$(echo -n "$1" | tr -d '"' | curl -Gso /dev/null -w %{url_effective} --data-urlencode @- "" | cut -c 3-)
 
 # The generic string pattern to be replaced
 SEARCH_PATTERN="focalTweetId%22%3A%22[0-9]*%22"

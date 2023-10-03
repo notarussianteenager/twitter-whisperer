@@ -36,7 +36,7 @@ while [ $counter -lt $1 ]; do
 done
 
 # After the loop completes, concatenate all files in the tweet/ directory, remove quotes, and parse as a JSON array
-rm tweet/tweets.json
+rm -f tweet/tweets.json
 cat tweet/*.json > tweets.json
 rm tweet/*.json
 jq -R -s -c 'gsub("\""; "") | split("\n")[:-1]' tweets.json > tweet/tweets.json

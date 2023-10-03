@@ -42,3 +42,5 @@ rm tweet/*.json
 jq -R -s -c 'gsub("\""; "") | split("\n")[:-1]' tweets.json > tweet/tweets.json
 rm tweets.json
 
+# Download all the details for the tweet ids in tweets.json
+bash get_tweets.sh
